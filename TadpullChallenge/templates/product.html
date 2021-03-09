@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="mt-5 pt-4">
+  <div class="container dark-grey-text mt-5">
+
+    <!--Grid row-->
+    <div class="row wow fadeIn">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <img src="{{ object.url_is_alive}} " class="img-fluid" alt="">
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <!--Content-->
+        <div class="p-4">
+
+          <div class="mb-3">
+            <a href="">
+              <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+            </a>
+          </div>
+          <h3>{{ item.name }}</h3>
+
+         <h4>${{ item.price }}</h4>
+          <h5 class="{{ item.format_quantity }}">
+            Quantity Sold: {{ item.quantitySold }} <br>
+            Quantity Available: {{ item.quantityAvailable }} <br></h5>
+
+        </div>
+        <!--Content-->
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+    <hr>
+
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center wow fadeIn">
+
+
+    </div>
+    <!--Grid row-->
+
+    <!--Grid row-->
+
+    <!--Grid row-->
+
+  </div>
+</main>
+
+{% endblock content %}
